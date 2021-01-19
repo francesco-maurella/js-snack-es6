@@ -35,6 +35,6 @@ for (var i = 0; i < bikes.length; i++) {
   }
 }
 
-let {modello, peso} = thisBike;
+const {modello, peso} = thisBike;
 
 console.log(`La bicicletta più leggera è ${modello}: ${peso} Kg`);

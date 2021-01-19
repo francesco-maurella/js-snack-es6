@@ -10,22 +10,39 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi
 contengono solo nomi e falli subiti e stampiamo tutto in console.
 */
 
-const team1 = {
+// funzione generatrice numeri random
+function getRandomNum() {
+  var num = parseInt(Math.floor((Math.random() * 100) + 1));
+  return num;
+}
+
+let team1 = {
   name : 'Metropolis Team',
-  points : '98',
-  fouls : '2',
+  points : '0',
+  fouls : '0',
 }
 
-const team1 = {
+let team2 = {
   name : 'Gotham Team',
-  points : '55',
-  fouls : '5',
+  points : '0',
+  fouls : '0',
 }
 
-const team1 = {
+let team3 = {
   name : 'Star Team',
-  points : '75',
-  fouls : '4',
+  points : '0',
+  fouls : '0',
 }
 
 const footbTeams = [team1, team2, team3];
+
+
+for (let i = 0; i < footbTeams.length; i++) {
+  footbTeams[i] = {
+    name,
+    points : getRandomNum(),
+    foul : getRandomNum()
+  }
+}
+
+console.log(footbTeams)
