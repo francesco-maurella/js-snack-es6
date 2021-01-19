@@ -22,7 +22,6 @@ var bike2 = {
   'peso(kg)' : '18'
 }
 
-
 // oggetto terza bicicletta
 var bike3 = {
   'marca' : 'cms',
