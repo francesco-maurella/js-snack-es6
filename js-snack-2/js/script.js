@@ -12,7 +12,7 @@ contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 // funzione generatrice numeri random
 function getRandomNum() {
-  var num = parseInt(Math.floor((Math.random() * 100) + 1));
+  var num = parseInt(Math.floor((Math.random() * 10) + 1));
   return num;
 }
 
@@ -35,6 +35,7 @@ let team3 = {
 }
 
 const footbTeams = [team1, team2, team3];
+const footbTeamsFouls = [];
 
 
 for (let i = 0; i < footbTeams.length; i++) {
@@ -43,6 +44,8 @@ for (let i = 0; i < footbTeams.length; i++) {
     points : getRandomNum(),
     fouls : getRandomNum()
   }
-}
+  let {name, fouls} = footbTeams[i];
+  footbTeamsFouls.push({name, fouls});
+};
 
-console.log(footbTeams)
+console.log(footbTeamsFouls);
