@@ -11,36 +11,37 @@ function getRandomNum() {
   return num;
 }
 
-let team1 = {
+
+let team1 = { // squadra 1
   name : 'Metropolis Team',
   points : '0',
   fouls : '0',
 }
 
-let team2 = {
+let team2 = { // squadra 2
   name : 'Gotham Team',
   points : '0',
   fouls : '0',
 }
 
-let team3 = {
+let team3 = { // squadra 3
   name : 'Star Team',
   points : '0',
   fouls : '0',
 }
 
-const footbTeams = [team1, team2, team3];
-const footbTeamsFouls = [];
+const footbTeams = [team1, team2, team3]; // array di tutti i dati delle squadre
+const footbTeamsFouls = []; // array riportanti nomi e i falli delle squadre
 
-
+// parte un ciclo for che naviga nell'array footbTeams
 for (let i = 0; i < footbTeams.length; i++) {
-  footbTeams[i] = {
+  footbTeams[i] = { // generiamo randomicamente punti e falli di ogni squadra
     name : footbTeams[i].name,
     points : getRandomNum(),
     fouls : getRandomNum()
   }
-  let {name, fouls} = footbTeams[i];
-  footbTeamsFouls.push({name, fouls});
+  let {name, fouls} = footbTeams[i]; // estrapoliamo nomi e falli
+  footbTeamsFouls.push({name, fouls}); // riportiamoli
 };
 
-console.log(footbTeamsFouls);
+console.log(footbTeamsFouls); // stampiamo l'array footbTeamsFouls
