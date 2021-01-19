@@ -7,7 +7,7 @@ Stampare array contenene nomi squadre e falli subiti.
 
 // funzione generatrice numeri random
 function getRandomNum() {
-  var num = parseInt(Math.floor((Math.random() * 10) + 1));
+  let num = parseInt(Math.floor((Math.random() * 10) + 1));
   return num;
 }
 
@@ -34,13 +34,14 @@ const footbTeamsFouls = []; // array riportanti nomi e i falli delle squadre
 
 // parte un ciclo for che naviga nell'array footbTeams
 for (let i = 0; i < footbTeams.length; i++) {
-  footbTeams[i] = { // generiamo randomicamente punti e falli di ogni squadra
-    name : footbTeams[i].name,
+  let name = footbTeams[i].name // PROPRIETA) name - VALORE) footbTeams[i].name
+  footbTeams[i] = {  // generiamo randomicamente punti e falli di ogni squadra
+    name,
     points : getRandomNum(),
     fouls : getRandomNum()
   }
-  let {name, fouls} = footbTeams[i]; // estrapoliamo nomi e falli
-  footbTeamsFouls.push({name, fouls}); // portiamoli nell'array footbTeamsFouls
+  let {fouls} = footbTeams[i]; // estrapoliamo solo i falli
+  footbTeamsFouls.push({name, fouls}); //pushamo nome e falli in footbTeamsFouls
 };
 
 console.log(footbTeamsFouls); // stampiamo l'array footbTeamsFouls
