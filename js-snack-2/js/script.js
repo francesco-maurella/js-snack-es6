@@ -41,7 +41,7 @@ for (let i = 0; i < footbTeams.length; i++) {
     fouls : getRandomNum()
   }
   let {name, fouls} = footbTeams[i]; // estrapoliamo nomi e falli
-  footbTeamsFouls.push({name, fouls}); // riportiamoli
+  footbTeamsFouls.push({name, fouls}); // portiamoli nell'array footbTeamsFouls
 };
 
 console.log(footbTeamsFouls); // stampiamo l'array footbTeamsFouls
