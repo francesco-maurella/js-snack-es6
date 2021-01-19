@@ -34,7 +34,12 @@ const footbTeamsFouls = []; // array riportanti nomi e i falli delle squadre
 
 // parte un ciclo for che naviga nell'array footbTeams
 for (let i = 0; i < footbTeams.length; i++) {
-  let name = footbTeams[i].name // PROPRIETA) name - VALORE) footbTeams[i].name
+  let {name} = footbTeams[i]; // estrapoliamo solo i nomi da ogni squadra
+      /* --------  Che è uguale a scrivere:  --------
+          let name = footbTeams[i].name
+                      PROPRIETA)  name
+                      VALORE) footbTeams[i].name
+        -------------------------------------------- */
   footbTeams[i] = {  // generiamo randomicamente punti e falli di ogni squadra
     name,
     points : getRandomNum(),
