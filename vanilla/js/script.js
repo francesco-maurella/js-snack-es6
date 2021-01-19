@@ -1,3 +1,10 @@
+/*
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici.
+Stampare a schermo la bici con peso minore
+*/
+
+// oggetto seconda bicicletta
 var bike1 = {
   'marca' : 'miele',
   'modello' : 'e-cross',
@@ -6,6 +13,7 @@ var bike1 = {
   'peso(kg)' : '26'
 }
 
+// oggetto prima bicicletta
 var bike2 = {
   'marca' : 'fiido',
   'modello' : 'd4s',
@@ -14,6 +22,8 @@ var bike2 = {
   'peso(kg)' : '18'
 }
 
+
+// oggetto terza bicicletta
 var bike3 = {
   'marca' : 'cms',
   'modello' : 'f16',
@@ -22,16 +32,16 @@ var bike3 = {
   'peso(kg)' : '20'
 }
 
+// array di biciclette
 var bikes = [bike1, bike2, bike3];
 
-var maxPeso = 0
+var thisBike = bikes[0]; // bicicletta di riferimento
 
 for (var i = 0; i < bikes.length; i++) {
-
-  if (bikes[i]['peso(kg)'] > maxPeso) {
-    maxPeso = bikes[i]['peso(kg)']
+  // se la bici attuale ha un peso inferiore a quella di riferimento
+  if (bikes[i]['peso(kg)'] < thisBike.peso) {
+    thisBike = bikes[i]; // la meno pesante diventa quella di riferimento
   }
-  
 }
 
-console.log(maxPeso)
+console.log(thisBike); // stampiamo la bici meno pesante
