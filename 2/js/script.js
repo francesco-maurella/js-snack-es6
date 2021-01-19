@@ -11,7 +11,6 @@ function getRandomNum() {
   return num;
 }
 
-
 let team1 = { // squadra 1
   name : 'Metropolis Team',
   points : '0',
