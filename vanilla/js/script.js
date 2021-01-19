@@ -4,7 +4,7 @@ Ogni oggetto descriverà una bici.
 Stampare a schermo la bici con peso minore
 */
 
-// oggetto seconda bicicletta
+// oggetto prima bicicletta
 var bike1 = {
   'marca' : 'miele',
   'modello' : 'e-cross',
@@ -13,7 +13,7 @@ var bike1 = {
   'peso(kg)' : '26'
 }
 
-// oggetto prima bicicletta
+// oggetto seconda bicicletta
 var bike2 = {
   'marca' : 'fiido',
   'modello' : 'd4s',
@@ -39,7 +39,7 @@ var thisBike = bikes[0]; // bicicletta di riferimento
 
 for (var i = 0; i < bikes.length; i++) {
   // se la bici attuale ha un peso inferiore a quella di riferimento
-  if (bikes[i]['peso(kg)'] < thisBike.peso) {
+  if (bikes[i]['peso(kg)'] < thisBike['peso(kg)']) {
     thisBike = bikes[i]; // la meno pesante diventa quella di riferimento
   }
 }
