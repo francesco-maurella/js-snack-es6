@@ -39,9 +39,9 @@ const footbTeams = [team1, team2, team3];
 
 for (let i = 0; i < footbTeams.length; i++) {
   footbTeams[i] = {
-    name,
+    name : footbTeams[i].name,
     points : getRandomNum(),
-    foul : getRandomNum()
+    fouls : getRandomNum()
   }
 }
 
