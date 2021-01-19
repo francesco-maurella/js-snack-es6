@@ -49,4 +49,9 @@ for (let i = 0; i < footbTeams.length; i++) {
   footbTeamsFouls.push({name, fouls}); //pushamo nome e falli in footbTeamsFouls
 };
 
-console.log(footbTeamsFouls); // stampiamo l'array footbTeamsFouls
+// stampiamo l'array footbTeams
+console.log('Footbal Teams - PUNTEGGIO');
+console.log(footbTeamsFouls);
+// stampiamo l'array footbTeamsFouls
+console.log('Footbal Teams - FALLI');
+console.log(footbTeamsFouls);

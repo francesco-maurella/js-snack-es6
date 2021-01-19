@@ -46,4 +46,9 @@ for (var i = 0; i < footbTeams.length; i++) {
   footbTeamsFouls.push(thisTeam); //pushamo thisTeam in footbTeamsFouls
 };
 
-console.log(footbTeamsFouls); // stampiamo l'array footbTeamsFouls
+// stampiamo l'array footbTeams
+console.log('Footbal Teams - PUNTEGGIO');
+console.log(footbTeamsFouls);
+// stampiamo l'array footbTeamsFouls
+console.log('Footbal Teams - FALLI');
+console.log(footbTeamsFouls);
