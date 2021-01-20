@@ -18,7 +18,7 @@ let y = 10;
 // in un nuovo contenitore
 const newContainer = container.filter ((element, index, array) => {
   return index >= (x-1) && index <= (y-1);
-})
+});
 
 // stampiamo il nuovo container
 console.log(newContainer);
