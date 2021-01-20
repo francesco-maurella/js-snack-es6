@@ -19,7 +19,7 @@ var y = 10;
 
 // duplichiamo gli elementi del container compresi tra posizione "x" e "y"
 for (var i = 0; i < container.length; i++) {
-  if (i >= (x+1) && i <= (y+1)) {
+  if (i >= (x-1) && i <= (y-1)) {
     newContainer.push(container[i])
   }
 }
