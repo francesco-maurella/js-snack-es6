@@ -1,8 +1,7 @@
 /*
-Si scriva una funzione che accetti tre argomenti,
-un array e due numeri (A più piccolo di B).
-La funzione ritornerà un nuovo array con i valori
-che hanno la posizione compresa tra i due numeri
+Abbiamo un array contenente degli elementi.
+Duplichiamo questi ultimi in un nuovo array, scegliendo, però,
+solo quelli da posizione "x" a posizione "y" (che definiremo noi).
 */
 
 // funzione elementi filtrati in nuovo array
@@ -17,23 +16,14 @@ function getFilteredArray(array, min, max) {
   return newArray;
 }
 
-// funzione scelta numerica con limite minimo e massimo
+// funzione scelta numerica con verifica requisiti
 function getUserNumber(min, max){
   var num;
   while (!num) { // esegui ciclo finchè num è false
     num = parseInt(prompt('Inserici un numero da ' + min + ' a ' + max));
-    if (isNaN(num)) { // se num non è un intero
-      num = false;
-      alert('Ammessi solo caratteri numerici!');
-    } else { // se invece è un intero
-      if (num < min) {
-        num = false; // non deve essere minore di min
-        alert('Ammessi solo numeri maggiori di ' + min);
-      }
-      if (num > max) {
-        num = false; // non deve essere maggiore di max
-        alert('Ammessi solo numeri fino a ' + max);
-      }
+    if (isNaN(num) || num < min || num > max) {
+      num = false; // se non è un numero, se minore di min, se maggiore di max
+      alert('Valore inserito non valido!');
     }
   }
   return num;
@@ -47,7 +37,7 @@ var howMany = container.length; // quantità contenuti
 var x = getUserNumber(1, howMany);
 
 // valore "y"
-var y = getUserNumber(x, howMany)
+var y = getUserNumber(x, howMany);
 
 // creiamo un nuovo array contenente gli elementi del contailer filtrati
 var newContainer = getFilteredArray(container, x, y);

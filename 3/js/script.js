@@ -1,18 +1,31 @@
 /*
-Si scriva una funzione che accetti tre argomenti,
-un array e due numeri (A più piccolo di B).
-La funzione ritornerà un nuovo array con i valori
-che hanno la posizione compresa tra i due numeri
+Abbiamo un array contenente degli elementi.
+Duplichiamo questi ultimi in un nuovo array, scegliendo, però,
+solo quelli da posizione "x" a posizione "y" (che definiremo noi).
 */
+
+// funzione scelta numerica con verifica requisiti
+const getUserNumber = (min, max) => {
+  let num;
+  while (!num) { // esegui ciclo finchè num è false
+    num = parseInt(prompt(`Inserisci un numero da ${min} a ${max}`));
+    if (isNaN(num) || num < min || num > max) {
+      num = false; // se non è un numero, se minore di min, se maggiore di max
+      alert('Valore inserito non valido!');
+    }
+  }
+  return num;
+}
 
 // creiamo un primo contenitore
 const container = ['A','B','C','D','E','F','G','H','I','L','M','N','O'];
+let howMany = container.length; // quantità contenuti
 
 // valore "x"
-let x = 5;
+let x = getUserNumber(1, howMany);
 
 // valore "y"
-let y = 10;
+let y = getUserNumber(x, howMany);
 
 // riportiamo gli elementi del container compresi tra posizione "x" e "y"
 // in un nuovo contenitore
