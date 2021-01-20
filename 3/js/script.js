@@ -27,8 +27,8 @@ let x = getUserNumber(1, howMany);
 // valore "y"
 let y = getUserNumber(x, howMany);
 
-// riportiamo gli elementi del container compresi tra posizione "x" e "y"
-// in un nuovo contenitore
+/* riportiamo gli elementi del container compresi tra
+le posizioni "x" e "y" in un nuovo contenitore */
 const newContainer = container.filter ((element, index, array) => {
   return index >= (x-1) && index <= (y-1);
 });

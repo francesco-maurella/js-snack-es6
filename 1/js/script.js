@@ -27,7 +27,7 @@ const bikes = [bike1, bike2, bike3];
 
 let thisBike = bikes[0]; // bicicletta di riferimento
 
-for (var i = 0; i < bikes.length; i++) {
+for (let i = 0; i < bikes.length; i++) {
   let {modello, peso} = bikes[i]
   // se la bici attuale ha un peso inferiore a quella di riferimento
   if (peso < thisBike.peso) {
